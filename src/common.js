@@ -64,7 +64,9 @@ function setup(env) {
 	function createDebug(namespace) {
 		let prevTime;
 
-		function debug(...args) {
+		function debug() {
+			let args = arguments;
+			
 			// Disabled?
 			if (!debug.enabled) {
 				return;
